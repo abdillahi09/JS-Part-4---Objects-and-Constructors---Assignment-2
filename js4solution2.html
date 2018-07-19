@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JS Part 2 - Assignment 2 Solution</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body style="background-color: goldenrod">
+    <h1 style="color:ghostwhite; text-align: center; padding-top: 40px">JavaScript Constructor - Assignment 2</h1>
+    <script>
+        function airPlane(model, seatingCapacity, maxSpeed) {
+            this.model = model;
+            this.seatingCapacity = seatingCapacity;
+            this.maxSpeed = maxSpeed;
+            this.print = function print(){
+                console.log('Model: ' + this.model);
+                console.log('Seating Capacity: ' + this.seatingCapacity);
+                console.log('Maximum Speed: ' + this.maxSpeed);
+            }
+        }
+
+        /* Create 3 Airplane Objects and call their print methods */
+
+        var airPlane1 = new airPlane('Airbus', 250, '3 Mach');
+        var airPlane2 = new airPlane('Boeing 78X', 520, '2.5 Mach');
+        var airPlane3 = new airPlane('Bombardier Eagle', 150, '4 Mach');
+
+        /* Logs new airplanes into the console */
+
+        console.log(airPlane1.print());
+        console.log(airPlane2.print());
+        console.log(airPlane3.print());
+
+        /* Increase Seating Capacity for all airplanes objects by 10 */
+
+        airPlane1.seatingCapacity += 10;
+        airPlane2.seatingCapacity += 10;
+        airPlane3.seatingCapacity += 10;
+
+        console.log(airPlane1.print());
+        console.log(airPlane2.print());
+        console.log(airPlane3.print());
+
+        /* Delete maximum speed for all objects */
+
+        delete airPlane1.maxSpeed;
+        delete airPlane2.maxSpeed;
+        delete airPlane3.maxSpeed;
+
+        console.log(airPlane1);
+        console.log(airPlane2);
+        console.log(airPlane3);
+
+        /* Add new property average speed for all objects with value 600 */
+
+        airPlane1.meanSpeed = 600;
+        airPlane2.meanSpeed = 600;
+        airPlane3.meanSpeed = 600;
+
+        console.log(airPlane1);
+        console.log(airPlane2);
+        console.log(airPlane3);
+
+        /* ======= END ====== */
+
+    </script>
+    
+</body>
+</html>
